@@ -73,7 +73,7 @@ PRODUCT_MODEL := Pixel 4a (5G)
 # Inherit some common PixelExperience stuff.
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
-include device/google/redfin/device-custom.mk
+include device/google/bramble/device-custom.mk
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2340
@@ -85,4 +85,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 BUILD_FINGERPRINT := google/bramble/bramble:13/TQ1A.230105.001/9292298:user/release-keys
 
-$(call inherit-product, vendor/google/redfin/redfin-vendor.mk)
+$(call inherit-product, vendor/google/bramble/bramble-vendor.mk)
