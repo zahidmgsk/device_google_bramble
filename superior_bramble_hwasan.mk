@@ -1,5 +1,5 @@
 #
-# Copyright 2021 The Android Open Source Project
+# Copyright 2020 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,6 +14,10 @@
 # limitations under the License.
 #
 
-$(call inherit-product, device/google/bramble/aosp_bramble.mk)
-PRODUCT_NAME := aosp_bramble_64
-PRODUCT_MODEL := Bramble 64-bit only
+$(call inherit-product, device/google/bramble/superior_bramble.mk)
+PRODUCT_NAME := superior_bramble_hwasan
+
+# Add "hwaddress" as a global sanitizer if it's missing.
+ifeq ($(filter hwaddress,$(SANITIZE_TARGET)),)
+  SANITIZE_TARGET := $(strip $(SANITIZE_TARGET) hwaddress)
+endif

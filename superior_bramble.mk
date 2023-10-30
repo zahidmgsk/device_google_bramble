@@ -66,12 +66,12 @@ PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true
 
 PRODUCT_MANUFACTURER := Google
 PRODUCT_BRAND := google
-PRODUCT_NAME := aosp_bramble
+PRODUCT_NAME := superior_bramble
 PRODUCT_DEVICE := bramble
 PRODUCT_MODEL := Pixel 4a (5G)
 
 # Inherit some common PixelExperience stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/superior/config/common.mk)
 
 include device/google/bramble/device-custom.mk
 
